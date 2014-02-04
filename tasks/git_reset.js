@@ -24,11 +24,10 @@ module.exports = function(grunt) {
     done = this.async();
 
     if (!options.path) {
-      errorMessage  = '`path` setting is required to prevent' +
-                      'unwanted lose of changes. If you want to' +
-                      'reset changes from the root, use `path: \'.\'`';
-      grunt.log.writeln(errorMessage);
-      return;
+      errorMessage  = '`path` setting is required to prevent \n' +
+                      'unwanted lose of changes. If you want to \n' +
+                      'reset changes from the root, use `path: \'.\'`\n';
+      throw new Error(errorMessage);
     }
 
     checkout = spawn('git', ['checkout', '--', options.path]);
