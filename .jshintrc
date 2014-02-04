@@ -1,5 +1,4 @@
 {
-  "es3": true,
   "curly": true,
   "eqeqeq": true,
   "immed": true,
