@@ -30,20 +30,13 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     git_reset: {
-      default_options: {
+      good_options: {
         options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'path': 'test/fixtures/'
         }
       },
-      custom_options: {
+      bad_options: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
         }
       }
     },
